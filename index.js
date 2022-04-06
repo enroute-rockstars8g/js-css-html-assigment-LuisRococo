@@ -16,13 +16,17 @@ let starsPut = 0;
 
 function calculateFibo() {
     const maxParamValue = 100;
-    if (elmInputFibo.value.length === 0) {
+    if (isCaritaEmpapada(elmInputFibo.value)) {
+        window.open("https://www.youtube.com/watch?v=enup62u1LEk", "_blank");
+        return;
+    }
+    if (elmInputFibo.value.length === 0 || isNaN(elmInputFibo.value)) {
         alert('Write a quantity');
         return;
     }
     let positionToSearch = parseInt(elmInputFibo.value);
 
-    if (positionToSearch < 0 || positionToSearch > maxParamValue) {
+    if (positionToSearch <= 0 || positionToSearch > maxParamValue) {
         alert(`High or negative values are not accepted lol\nMax value is ${maxParamValue}`);
         return;
     }
@@ -32,9 +36,19 @@ function calculateFibo() {
     showPopUp();
 }
 
+
+function isCaritaEmpapada (value) {
+    value = value.toLowerCase();
+    return (value === 'carita empapada');
+}
+
 function calculateFactorial() {
     const maxParamValue = 20;
-    if (elmInputFactorial.value.length === 0) {
+    if (isCaritaEmpapada(elmInputFibo.value)) {
+        window.open("https://www.youtube.com/watch?v=enup62u1LEk", "_blank");
+        return;
+    }
+    if (elmInputFactorial.value.length === 0 || isNaN(elmInputFibo.value)) {
         alert('Write a quantity');
         return;
     }

@@ -206,7 +206,7 @@ body {
 .pop-up {
     background-color: white;
     width: 700px;
-    max-width: 700px;
+    max-width: 95%;
     z-index: 20;
     border-radius: 10px;
     padding: 30px;
@@ -248,6 +248,7 @@ body {
     font-weight: bold;
     text-align: center;
     letter-spacing: 7px;
+    word-wrap: break-word;
 }
 
 .rroll{
