@@ -157,7 +157,7 @@ function createStarImgNode() {
     return img;
 }
 
-function redirect () {
+function surprise () {
     //Do not open this link directly ;)
     window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
 }
