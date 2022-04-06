@@ -1,7 +1,7 @@
 :root {
     --main-color: rgb(138, 33, 84);
     --background-color: rgb(218, 218, 218);
-  }
+}
 
 * {
     padding: 0;
@@ -9,7 +9,7 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: var(--background-color);
     font-family: 'Roboto', sans-serif;
     color: rgb(47, 47, 47);
@@ -28,10 +28,6 @@ body{
     margin-bottom: 17px;
 }
 
-.header__title {
-
-}
-
 .background-header {
     background-color: var(--main-color);
     position: absolute;
@@ -45,24 +41,24 @@ body{
 /* PRESENTATION */
 .presentation {
     background-color: white;
-    padding: 70px;   
+    padding: 70px;
     margin-bottom: 40px;
     border-radius: 5px;
 }
 
-.presentation__header{
+.presentation__header {
     display: flex;
 }
 
-.presentation__header-sub-title{
+.presentation__header-sub-title {
     font-size: 1.3rem;
 }
 
-.presentation__header-img-cont{
+.presentation__header-img-cont {
     flex: 1;
 }
 
-.presentation__header-data-cont{
+.presentation__header-data-cont {
     flex: 2;
     display: flex;
     flex-direction: column;
@@ -76,7 +72,7 @@ body{
     margin-bottom: 10px;
 }
 
-.presentation__header-img{
+.presentation__header-img {
     width: 85%;
     border-radius: 50%;
 }
@@ -85,7 +81,7 @@ body{
     display: flex;
 }
 
-.presentation__body-col{
+.presentation__body-col {
     flex: 1;
 }
 
@@ -97,37 +93,37 @@ body{
     border-color: rgb(110, 110, 110);
 }
 
-.presentation__body-title{
+.presentation__body-title {
     font-weight: bold;
     font-size: 1.1rem;
     margin-bottom: 10px;
 }
 
-.presentation__body-list{
+.presentation__body-list {
     list-style-type: none;
 }
 
-.presentation__body-list li{
+.presentation__body-list li {
     text-decoration: none;
 }
 
 /* BIO SECTION */
-.sc-about-me{
+.sc-about-me {
     margin-bottom: 60px;
 }
 
-.section-title{
+.section-title {
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
 }
 
-.sep--sec{
+.sep--sec {
     margin-top: 10px;
     margin-bottom: 30px;
 }
 
-.sc-about-me__text{
+.sc-about-me__text {
     font-size: 1.4rem;
     line-height: 35px;
     text-align: justify;
@@ -139,7 +135,7 @@ body{
 
 /* CALCULATE SECTION */
 
-.sc-programming{
+.sc-programming {
     background-color: white;
     border-radius: 8px;
     text-align: center;
@@ -147,22 +143,22 @@ body{
     margin-bottom: 30px;
 }
 
-.sc-programming__title{
+.sc-programming__title {
     font-size: 1.4rem;
 }
 
-.sc-programming__instruction{
+.sc-programming__instruction {
     font-size: 1.2rem;
 }
 
-.input-cont{
+.input-cont {
     margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.input-cont__input{
+.input-cont__input {
     font-size: 1.2rem;
     padding: 7px 10px;
     margin-right: 10px;
@@ -170,13 +166,14 @@ body{
     min-width: 150px;
 }
 
-.input-cont__btn{
+.input-cont__btn {
     height: 50px;
     background-color: var(--main-color);
     padding: 5px 20px;
     font-size: 1.2rem;
     color: white;
     border: none;
+    cursor: pointer;
 }
 
 .input-cont__btn:hover {
@@ -185,4 +182,128 @@ body{
 
 .input-cont__btn:active {
     background-color: rgb(124, 0, 54);
+}
+
+/* FLOATING POP-UP */
+
+.hidden {
+    display: none !important;
+}
+
+.blackout-screen {
+    position: fixed;
+    background-color: rgba(80, 80, 80, 0.474);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-up {
+    background-color: white;
+    width: 700px;
+    max-width: 700px;
+    z-index: 20;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px 10px;
+}
+
+.pop-up__img-cont {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pop-up__close-img {
+    width: 60px;
+}
+
+.pop-up__close-img {
+    cursor: pointer;
+}
+
+.pop-up__title {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.pop-up__star-cont {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pop-up__star-img {
+    width: 60px;
+    margin: 10px;
+}
+
+.pop-up__result {
+    font-size: 2.5rem;
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 7px;
+}
+
+.rroll{
+    display: block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+@media (max-width: 900px) {
+    .presentation__header {
+        flex-direction: column;
+    }
+
+    .presentation__header-data-cont {
+        align-items: center;
+        text-align: center;
+        margin: 0;
+    }
+
+    .presentation__header-img-cont {
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        padding: 4% 6%;
+    }
+
+    .header__title {
+        text-align: center;
+    }
+
+    .presentation__body{
+        flex-direction: column;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .presentation__body-col{
+        margin-bottom: 20px;
+    }
+
+    .header{
+        margin: 20px 0;
+    }
+
+    .presentation__body-title{
+        font-size: 1.6rem;
+    }
+
+    .presentation{
+        padding: 20px;
+    }
 }
