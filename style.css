@@ -1,0 +1,188 @@
+:root {
+    --main-color: rgb(138, 33, 84);
+    --background-color: rgb(218, 218, 218);
+  }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--background-color);
+    font-family: 'Roboto', sans-serif;
+    color: rgb(47, 47, 47);
+}
+
+.wrapper {
+    min-height: 100vh;
+}
+
+.container {
+    padding: 4% 16%;
+}
+
+.header {
+    color: white;
+    margin-bottom: 17px;
+}
+
+.header__title {
+
+}
+
+.background-header {
+    background-color: var(--main-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 40vh;
+    width: 100vw;
+    z-index: -10;
+}
+
+/* PRESENTATION */
+.presentation {
+    background-color: white;
+    padding: 70px;   
+    margin-bottom: 40px;
+    border-radius: 5px;
+}
+
+.presentation__header{
+    display: flex;
+}
+
+.presentation__header-sub-title{
+    font-size: 1.3rem;
+}
+
+.presentation__header-img-cont{
+    flex: 1;
+}
+
+.presentation__header-data-cont{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 40px;
+    align-items: flex-start;
+}
+
+.presentation__header-title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.presentation__header-img{
+    width: 85%;
+    border-radius: 50%;
+}
+
+.presentation__body {
+    display: flex;
+}
+
+.presentation__body-col{
+    flex: 1;
+}
+
+.sep {
+    margin: 25px 0;
+    border: none;
+    border-bottom: solid;
+    border-bottom-width: 2px;
+    border-color: rgb(110, 110, 110);
+}
+
+.presentation__body-title{
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.presentation__body-list{
+    list-style-type: none;
+}
+
+.presentation__body-list li{
+    text-decoration: none;
+}
+
+/* BIO SECTION */
+.sc-about-me{
+    margin-bottom: 60px;
+}
+
+.section-title{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sep--sec{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.sc-about-me__text{
+    font-size: 1.4rem;
+    line-height: 35px;
+    text-align: justify;
+}
+
+.sc-about-me__text p {
+    margin-bottom: 20px;
+}
+
+/* CALCULATE SECTION */
+
+.sc-programming{
+    background-color: white;
+    border-radius: 8px;
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.sc-programming__title{
+    font-size: 1.4rem;
+}
+
+.sc-programming__instruction{
+    font-size: 1.2rem;
+}
+
+.input-cont{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-cont__input{
+    font-size: 1.2rem;
+    padding: 7px 10px;
+    margin-right: 10px;
+    height: 50px;
+    min-width: 150px;
+}
+
+.input-cont__btn{
+    height: 50px;
+    background-color: var(--main-color);
+    padding: 5px 20px;
+    font-size: 1.2rem;
+    color: white;
+    border: none;
+}
+
+.input-cont__btn:hover {
+    background-color: rgb(182, 0, 79);
+}
+
+.input-cont__btn:active {
+    background-color: rgb(124, 0, 54);
+}
