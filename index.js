@@ -12,11 +12,12 @@ const resultAnimationSpeed = 200;
 const starImageElement = createStarImgNode();
 let resultAnimInterval = null;
 let actualNumber = 0;
-let starsPut = 0;
+let starsAdded = 0;
 
 function calculateFibo() {
     const maxParamValue = 100;
     if (isCaritaEmpapada(elmInputFibo.value)) {
+        //Do not open this link directly ;)
         window.open("https://www.youtube.com/watch?v=enup62u1LEk", "_blank");
         return;
     }
@@ -44,11 +45,12 @@ function isCaritaEmpapada (value) {
 
 function calculateFactorial() {
     const maxParamValue = 20;
-    if (isCaritaEmpapada(elmInputFibo.value)) {
+    if (isCaritaEmpapada(elmInputFactorial.value)) {
+        //Do not open this link directly ;)
         window.open("https://www.youtube.com/watch?v=enup62u1LEk", "_blank");
         return;
     }
-    if (elmInputFactorial.value.length === 0 || isNaN(elmInputFibo.value)) {
+    if (elmInputFactorial.value.length === 0 || isNaN(elmInputFactorial.value)) {
         alert('Write a quantity');
         return;
     }
@@ -108,7 +110,7 @@ function startResultAnimation(result, title) {
     elmPopUpImgcont.innerHTML = '';
     remainingDigits = result.toString();
     elmPopUpResult.innerHTML = '';
-    starsPut = 0;
+    starsAdded = 0;
 
     newDigit = remainingDigits.charAt(0);
     actualNumber = parseInt(newDigit);
@@ -116,17 +118,17 @@ function startResultAnimation(result, title) {
 
     resultAnimInterval = window.setInterval(() => {
 
-        if (starsPut < actualNumber) {
+        if (starsAdded < actualNumber) {
             const imgElemClone = starImageElement.cloneNode(true);
             elmPopUpImgcont.appendChild(imgElemClone);
-            starsPut++;
+            starsAdded++;
         } else {
             if (remainingDigits.length === 0) {
                 cancelResultAnimation();
             }
                 elmPopUpResult.innerText += newDigit;
                 newDigit = remainingDigits.charAt(0);
-                starsPut = 0;
+                starsAdded = 0;
                 actualNumber = parseInt(newDigit);
                 remainingDigits = remainingDigits.slice(1, remainingDigits.length);
                 elmPopUpImgcont.innerHTML = '';
@@ -156,5 +158,6 @@ function createStarImgNode() {
 }
 
 function redirect () {
+    //Do not open this link directly ;)
     window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
 }
