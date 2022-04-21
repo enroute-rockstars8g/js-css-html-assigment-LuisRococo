@@ -38,7 +38,7 @@ function calculateFibo() {
 }
 
 
-function isCaritaEmpapada (value) {
+function isCaritaEmpapada(value) {
     value = value.toLowerCase();
     return (value === 'carita empapada');
 }
@@ -126,12 +126,12 @@ function startResultAnimation(result, title) {
             if (remainingDigits.length === 0) {
                 cancelResultAnimation();
             }
-                elmPopUpResult.innerText += newDigit;
-                newDigit = remainingDigits.charAt(0);
-                starsAdded = 0;
-                actualNumber = parseInt(newDigit);
-                remainingDigits = remainingDigits.slice(1, remainingDigits.length);
-                elmPopUpImgcont.innerHTML = '';
+            elmPopUpResult.innerText += newDigit;
+            newDigit = remainingDigits.charAt(0);
+            starsAdded = 0;
+            actualNumber = parseInt(newDigit);
+            remainingDigits = remainingDigits.slice(1, remainingDigits.length);
+            elmPopUpImgcont.innerHTML = '';
         }
 
     }, resultAnimationSpeed);
@@ -152,12 +152,12 @@ function closePopUp() {
 
 function createStarImgNode() {
     const img = document.createElement('img');
-    img.src = '/img/626px-Black_star.png';
+    img.src = 'img/626px-Black_star.png';
     img.classList.add('pop-up__star-img');
     return img;
 }
 
-function surprise () {
+function surprise() {
     //Do not open this link directly ;)
     window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
 }
